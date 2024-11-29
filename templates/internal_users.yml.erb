@@ -1,0 +1,11 @@
+---
+# opensearch.yml written by Chef
+_meta:
+  type: "internalusers"
+  config_version: 2
+
+admin:
+  hash: "<%= @admin_hash %>"
+  reserved: true
+  backend_roles:
+    - "admin"

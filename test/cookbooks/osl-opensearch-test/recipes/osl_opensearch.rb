@@ -1,0 +1,1 @@
+osl_opensearch 'default'

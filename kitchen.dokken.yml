@@ -27,13 +27,3 @@ platforms:
     driver:
       image: dokken/almalinux-9
       pid_one_command: /usr/lib/systemd/systemd
-
-  - name: debian-12
-    driver:
-      image: dokken/debian-12
-      pid_one_command: /bin/systemd
-
-  - name: ubuntu-24.04
-    driver:
-      image: dokken/ubuntu-24.04
-      pid_one_command: /bin/systemd

@@ -15,14 +15,20 @@ provisioner:
   enforce_idempotency: true
   multiple_converge: 2
   deprecations_as_errors: true
+  data_bags_path: test/integration/data_bags
 
 platforms:
   - name: almalinux-8
   - name: almalinux-9
-  - name: debian-12
-  - name: ubuntu-24.04
 
 suites:
-  - name: default
+  - name: osl_logstash
+    driver:
+      user_data: userdata.txt
     run_list:
-      - recipe[osl-opensearch::default]
+      - recipe[osl-opensearch-test::osl_logstash]
+  - name: osl_opensearch
+    driver:
+      user_data: userdatatxt
+    run_list:
+      - recipe[osl-opensearch-test::osl_opensearch]
